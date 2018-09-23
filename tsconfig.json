@@ -1,0 +1,13 @@
+{
+  "extends": "./node_modules/@shyftplan/js-config/compilers/tsconfig",
+  "compilerOptions": {
+    "lib": ["es2015", "es2016", "dom", "dom.iterable"],
+    "baseUrl": "src",
+    "paths": {
+      "helpers/*": ["modules/helpers/*"]
+    },
+    "emitDecoratorMetadata": true
+  },
+  "jsx": "preserve",
+  "allowSyntheticDefaultImports": true,
+}

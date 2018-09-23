@@ -1,0 +1,30 @@
+{
+  "name": "track",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "npm run test:jest && npm run test:lint",
+    "test:lint": "node_modules/.bin/eslint . --ext js,jsx",
+    "test:jest": "NODE_ENV=test jest --config config/jest.config.js",
+    "coverage": "NODE_ENV=test jest --config config/jest.config.js --coverage",
+    "start": "node ./node_modules/@shyftplan/js-config/webpack/webpack.start-dev-server.js config/webpack.config.dev.js",
+    "build": "node_modules/.bin/webpack --config config/webpack.config.prod.js",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "@shyftplan/js-config": "4.x",
+    "html-webpack-plugin": "^3.2.0",
+    "vue-property-decorator": "^7.0.0",
+    "webpack": "^4.16.1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "@shyftplan/js-config/lint/tslint.json",
+  "rules": {
+    "import-name": [true, {
+      "vue": "Vue",
+      "vueRouter": "VueRouter",
+      "vuex": "Vuex"
+    }]
+  }
+}
